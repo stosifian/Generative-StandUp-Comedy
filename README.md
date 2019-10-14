@@ -2,7 +2,6 @@
 
 Shawheen Tosifian, stosifia@ucsd.edu
 
-(Your teammate's contact info, if appropriate)
 
 ## Abstract/Description
 
