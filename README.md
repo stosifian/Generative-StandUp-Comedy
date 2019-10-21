@@ -18,21 +18,25 @@ Of course, there are numerous restriction on this data - one big one being that 
 There has been a few experiments before with regards to 'generative comedy'. One of note is Botnik, a bot that uses a predictive keyboard 'to offer word choices to human writers'. Though not necessarily a generative network, it appears pretty good at what it does. You can read more about Botnik here: https://botnik.org
 
 
-
+	
 
 (Include your abstract here. This should be one paragraph clearly describing your concept, method, and results. This should tell us what architecture/approach you used. Also describe your creative goals, and whether you were successful in achieving them. Also could describe future directions.)
 
 ## Model/Data
 
 Briefly describe the files that are included with your repository:
-- trained models
-- training data (or link to training data). what is your corpus?
+- training_code.ipynb : notebook used to train the models (and create checkpoints to be loaded by generative_code
+- generative_code.ipynb: notebook used to load checkpoints and generate text from each model (as well a random model which chooses from a random model and you guess the source (i.e. comedian style)
+- ComedyText : directory containing the source text .txt files used to train the model (obtained the good ol' fashioned way (C+V) from transcripts on scrapsfromtheloft.com)
+- ._training : directories containing the last, updated checkpoint for respective model
+- SampleOutput.pdf : collected output from each model (labeled) in .pdf format
+
 
 ## Code
 
 Your code for generating your project:
-- training_code.py or training_code.ipynb - your training code
-- generative_code.py or generative_code.ipynb - your generation code
+- training_code.py - training code
+- generative_code.py - generation code
 
 ## Results
 
@@ -51,3 +55,8 @@ References to any papers, techniques, repositories you used:
   - [This is a paper](this_is_the_link.pdf)
 - Repositories
 - Blog posts
+
+
+
+
+
