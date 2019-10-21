@@ -33,7 +33,7 @@ For reference, there has been a few experiments before with regards to 'generati
 ## Model/Data
 
 Briefly describe the files that are included with your repository:
-- training_code.ipynb : notebook used to train the models (and create checkpoints to be loaded by generative_code
+- training_code.ipynb : notebook used to train the models (and create checkpoints to be loaded by generative_code)
 - generative_code.ipynb: notebook used to load checkpoints and generate text from each model (as well a random model which chooses from a random model and you guess the source (i.e. comedian style)
 - ComedyText : directory containing the source text .txt files used to train the model (obtained the good ol' fashioned way (C+V) from transcripts on scrapsfromtheloft.com)
 - ._training : directories containing the last, updated checkpoint for respective model
