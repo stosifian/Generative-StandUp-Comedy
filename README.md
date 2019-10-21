@@ -11,30 +11,23 @@ This topic was chosen primarily based off the idea that humor and comedy are for
 
 Of course, there are numerous restriction on this data - one big one being that this a textual translation of stand up comedy, which often relies as much on delivery as it does on material - and delivery is  hard to transcribe. So that dimension will be entirely missing.
 ### Approach
-First, 3 character-based RNN models were each individually trained on transcripts from stand up routines performed by a respective comedian in the hopes that each network could learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. The three comedians  chosen for this task were Bill Burr, Richard Pryor, and Anthony Jeselnik.
+First, 3 character-based RNN models (1024 RNN units, 256 dimension embedding) were each individually trained on stand up transcripts from 3 comedians in the hopes that each network could learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. The three comedians  chosen for this task were Bill Burr, Richard Pryor, and Anthony Jeselnik.
 
 To subjectively test whether the model represented its respective comedian's 'style' (i.e. verbalisms, content matter), the generative script would randomly select one of the 3 models and generate some text from it for you to try to guess the source comedian its emulating. 
 
-(I found it rather trivial to figure out the source comedian, despite the output being incoherent - this assuming you're familiar with the comedians).
+Lastly, a model was trained on the amalgamated data (transcripts from the previously mentioned comedians combined with ones from Dave Chappelle, Mitch Hedberg, and Nikki Glaser) and was used to generate 'unique' material that would ideally draw upon different elements of its source material.
 
-Lastly, a model was trained on the amalgamated data (transcripts from the previously mentioned comedians combined with ones from Dave Chappelle, Mitch Hedberg, and Nikki Glaser) and was used to generate 'unique' material that would ideally draw upon different elements of its source material. This model's output was slightly more coherent than the previous ones (most likely due to it being trained on more data) and you could still ascertain in certain parts of the output what source it's attempting to replicate.
+For the text generation, lower temperatures were used (<.5) to maintain some coherence in the output as beyond .75, output was largely nonsense words.
 
 ### Conclusion
-Overall, the results were mostly in line with expectations. I didn't expect coherent generation nor genuinely humorous takes (though the last model had interesting ramblings where it seemed that each sentence would come from a different comedian and the train of 'thought' was humorous in an absurd context). However, the individual models were able to somewhat replicate the comedian 'style' and were distinguishable from each other.
+Overall, the results were mostly in line with expectations. The individual models were able to somewhat replicate the comedian 'style' and were distinguishable from each other. If you're familiar enough with the comedians, it's trivial after a few tries to figure out the source. I didn't expect coherent generation nor genuinely humorous takes however the last (combined) model's output was more coherent that the individual ones. It had interesting ramblings where it seemed that each sentence would come from a different comedian and the train of 'thought' was humorous in an absurd sense (as if it was a 6-faced comedian, alternating personas every sentence or two).
 
+For future works, ideally more data would be used for training and a shift to a word-based model would be made.
 
-
-
-
-
-
-
-There has been a few experiments before with regards to 'generative comedy'. One of note is Botnik, a bot that uses a predictive keyboard 'to offer word choices to human writers'. Though not necessarily a generative network, it appears pretty good at what it does. You can read more about Botnik here: https://botnik.org
+For reference, there has been a few experiments before with regards to 'generative comedy'. One of note is Botnik, a bot that uses a predictive keyboard 'to offer word choices to human writers'. Though not necessarily a generative network, it appears pretty good at what it does. You can read more about Botnik here: https://botnik.org
 
 
 	
-
-(Include your abstract here. This should be one paragraph clearly describing your concept, method, and results. This should tell us what architecture/approach you used. Also describe your creative goals, and whether you were successful in achieving them. Also could describe future directions.)
 
 ## Model/Data
 
