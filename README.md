@@ -7,13 +7,24 @@ Shawheen Tosifian, stosifia@ucsd.edu
 
 The goal of this project is to create a character-based RNN that generates text/material (hopefully) in the vein of a stand up routine/special (specials traditionally being longer performances).
 
-The initial plan is to train individual networks on transcripts from stand up routines performed by various comedians in the hopes that each network can learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. Afterwards, an exercise can be carried out by generating data from a randomly chosen network and trying to determine (as a human audience) what comedian the network is 'trying' to emulate (i.e. what it was trained on).
+First, 3 networks/model were individually trained on transcripts from stand up routines performed by various comedians in the hopes that each network could learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. Three comedians were chosen for this task: Bill Burr, Richard Pryor, and Anthony Jeselnik.
 
-Moreover, a network will then be trained on the amalgamated data (transcripts from all the comedians) and will be used to generate 'unique' material that would ideally draw upon different elements of its source material
+To subjectively test whether the model represented its respective comedian's 'style' (i.e. verbalisms, content matter), the generative script will randomly select one of the 3 models and generate some text from it for you to try to guess the source comedian its emulating. 
+
+I found it rather trivial to figure out the source comedian, despite the output being incoherent (this assuming you're familiar with the comedians).
+
+Lastly, a model was trained on the amalgamated data (transcripts from the previously mentioned comedians combined with ones from Dave Chappelle, Mitch Hedberg, and Nikki Glaser) and was used to generate 'unique' material that would ideally draw upon different elements of its source material. This model's output was slightly more coherent than the previous ones (most likely due to it being trained on more data) and you could still in certain parts of the output what source it's attempting to replicate
+
 
 This topic was chosen primarily based off the idea that humor and comedy are for the most part seen as very human forms of expression. Humor (at least in the context of stand up comedy) often requires a large awareness of social context, basic understanding of human psychology, and reception to feedback (especially in an open mic context), amongst many other (what we see as) humanistic traits, such as creativity. Therefore, a hypothesis is that humor and comedy would be one of the last frontiers of human expression that a learning algorithm/'AI' would be able to replicate well, especially when it's only in a text-based language setting. As a result, my personal opinion is that the output won't be of any significance, especially with such a naive architecture (and inexperienced architect). However, it should be a fun(ny) exercise!
 
 Of course, there are numerous restriction on this data - one big one being that this a textual translation of stand up comedy, which often relies as much on delivery as it does on material - and delivery is very hard to transcribe. So that dimension will be entirely missing.
+
+Overall, the results were mostly in line with expectations. I didn't expect coherent generation nor genuinely humorous takes (though the last model had interesting ramblings where it seemed that each sentence would come from a different comedian and the train of 'thought' was humorous in an absurd context). However, the individual models were able to somewhat replicate the comedian 'style' and were distinguishable from each other.
+
+
+
+
 
 There has been a few experiments before with regards to 'generative comedy'. One of note is Botnik, a bot that uses a predictive keyboard 'to offer word choices to human writers'. Though not necessarily a generative network, it appears pretty good at what it does. You can read more about Botnik here: https://botnik.org
 
@@ -40,21 +51,12 @@ Your code for generating your project:
 
 ## Results
 
-- Documentation of your generative text in an effective form. A file with your generated text (.pdf, .doc, .txt). 
+- Sample outputs from each model (Bill Burr, Richard Pryor, Anthony Jeselnik, and combination) found in SampleOutput.pdf 
 
 ## Technical Notes
 
-Any implementation details or notes we need to repeat your work. 
-- Does this code require other pip packages, software, etc?
-- Does it run on some other (non-datahub) platform? (CoLab, etc.)
+Make sure when running generation code, to use GPU cluster on datahub. Output will be garbage otherwise. Training was done using the GPU but not sure why if run on CPU it comes out trash
 
-## Reference
-
-References to any papers, techniques, repositories you used:
-- Papers
-  - [This is a paper](this_is_the_link.pdf)
-- Repositories
-- Blog posts
 
 
 
