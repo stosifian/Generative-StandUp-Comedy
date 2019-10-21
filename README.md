@@ -14,7 +14,7 @@ Of course, there are numerous restriction on this data - one big one being that 
 ### Approach
 First, 3 character-based RNN models (1024 RNN units, 256 dimension embedding) were each individually trained on stand up transcripts from 3 comedians in the hopes that each network could learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. The three comedians  chosen for this task were Bill Burr, Richard Pryor, and Anthony Jeselnik.
 
-To subjectively test whether the model represented its respective comedian's 'style' (i.e. verbalisms, content matter), the generative script would randomly select one of the 3 models and generate some text from it for you to try to guess the source comedian its emulating. 
+To subjectively test whether the model represented its respective comedian's 'style' (i.e. verbalisms, content matter), the generative script would randomly select one of the 3 models and generate some text from it for you to try to guess the source comedian it's emulating. 
 
 Lastly, a model was trained on the amalgamated data (transcripts from the previously mentioned comedians combined with ones from Dave Chappelle, Mitch Hedberg, and Nikki Glaser) and was used to generate 'unique' material that would ideally draw upon different elements of its source material.
 
