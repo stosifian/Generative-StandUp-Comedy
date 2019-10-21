@@ -7,20 +7,23 @@ Shawheen Tosifian, stosifia@ucsd.edu
 
 The goal of this project is to create a character-based RNN that generates text/material (hopefully) in the vein of a stand up routine/special (specials traditionally being longer performances).
 
-First, 3 networks/model were individually trained on transcripts from stand up routines performed by various comedians in the hopes that each network could learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. Three comedians were chosen for this task: Bill Burr, Richard Pryor, and Anthony Jeselnik.
-
-To subjectively test whether the model represented its respective comedian's 'style' (i.e. verbalisms, content matter), the generative script will randomly select one of the 3 models and generate some text from it for you to try to guess the source comedian its emulating. 
-
-I found it rather trivial to figure out the source comedian, despite the output being incoherent (this assuming you're familiar with the comedians).
-
-Lastly, a model was trained on the amalgamated data (transcripts from the previously mentioned comedians combined with ones from Dave Chappelle, Mitch Hedberg, and Nikki Glaser) and was used to generate 'unique' material that would ideally draw upon different elements of its source material. This model's output was slightly more coherent than the previous ones (most likely due to it being trained on more data) and you could still in certain parts of the output what source it's attempting to replicate
-
-
 This topic was chosen primarily based off the idea that humor and comedy are for the most part seen as very human forms of expression. Humor (at least in the context of stand up comedy) often requires a large awareness of social context, basic understanding of human psychology, and reception to feedback (especially in an open mic context), amongst many other (what we see as) humanistic traits, such as creativity. Therefore, a hypothesis is that humor and comedy would be one of the last frontiers of human expression that a learning algorithm/'AI' would be able to replicate well, especially when it's only in a text-based language setting. As a result, my personal opinion is that the output won't be of any significance, especially with such a naive architecture (and inexperienced architect). However, it should be a fun(ny) exercise!
 
-Of course, there are numerous restriction on this data - one big one being that this a textual translation of stand up comedy, which often relies as much on delivery as it does on material - and delivery is very hard to transcribe. So that dimension will be entirely missing.
+Of course, there are numerous restriction on this data - one big one being that this a textual translation of stand up comedy, which often relies as much on delivery as it does on material - and delivery is  hard to transcribe. So that dimension will be entirely missing.
+
+First, 3 character-based RNN models were each individually trained on transcripts from stand up routines performed by a respective comedian in the hopes that each network could learn the 'style' of humor/stand up comedy of its respective comedian 'source data'. The three comedians  chosen for this task were Bill Burr, Richard Pryor, and Anthony Jeselnik.
+
+To subjectively test whether the model represented its respective comedian's 'style' (i.e. verbalisms, content matter), the generative script would randomly select one of the 3 models and generate some text from it for you to try to guess the source comedian its emulating. 
+
+(I found it rather trivial to figure out the source comedian, despite the output being incoherent - this assuming you're familiar with the comedians).
+
+Lastly, a model was trained on the amalgamated data (transcripts from the previously mentioned comedians combined with ones from Dave Chappelle, Mitch Hedberg, and Nikki Glaser) and was used to generate 'unique' material that would ideally draw upon different elements of its source material. This model's output was slightly more coherent than the previous ones (most likely due to it being trained on more data) and you could still ascertain in certain parts of the output what source it's attempting to replicate.
+
 
 Overall, the results were mostly in line with expectations. I didn't expect coherent generation nor genuinely humorous takes (though the last model had interesting ramblings where it seemed that each sentence would come from a different comedian and the train of 'thought' was humorous in an absurd context). However, the individual models were able to somewhat replicate the comedian 'style' and were distinguishable from each other.
+
+
+
 
 
 
