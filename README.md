@@ -1,11 +1,11 @@
-# Project 1 Generative Text
+# Generative Text
 
 Shawheen Tosifian, stosifia@ucsd.edu
 
 
 ## Abstract/Description
 
-The goal of this project is to create a character-based RNN that generates text/material (hopefully) in the vein of a stand up routine/special (specials traditionally being longer performances) and able to emulate the 'style' of the comedians the individual models were trained on.
+The goal of this project (done as an assignment for ECE 188 at UCSD) is to create a character-based RNN that generates text/material (hopefully) in the vein of a stand up routine/special (specials traditionally being longer performances) and able to emulate the 'style' of the comedians the individual models were trained on.
 
 This topic was chosen primarily based off the idea that humor and comedy are for the most part seen as very human forms of expression. Humor (at least in the context of stand up comedy) often requires a large awareness of social context, basic understanding of human psychology, and reception to feedback (especially in an open mic context), amongst many other (what we see as) humanistic traits, such as creativity. Therefore, a hypothesis is that humor and comedy would be one of the last frontiers of human expression that a learning algorithm/'AI' would be able to replicate well. As a result, there is little expectation that the outputs would be any significance, especially with such a naive architecture (and inexperienced architect). However, it should be a fun(ny) exercise!
 
